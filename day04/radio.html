@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--id: 학번, 한 컨텐츠 내에서 특정한 하나를 지정할 때, -->
+    <!--class: 학과 여러 컨텐츠를 하나로 묶을 때 ex. 유튜브 재생목록에 각각의 영상은 다르지만 썸네일, 제목, 조회수 등의 양식은 같음-->
+   
+    <!--radio 컨텐츠에는 name, id 필수-->
+    <!--name이 같은 라디오 버튼끼리 그룹이 된다. name이 같은 컨텐츠끼리는 중복선택 불가능-->
+    <!--checkbox는 한 번 더 누르면 해제, radio는 x-->
+    
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+    <br>
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="radio" name="" id="">
+
+    
+    <!--div.input-container>div.contents*4>label=input:r-->
+   
+    <form action="" method="get">
+   
+        <div class="input-container">
+            <!--label의 for 속성에는 연결할 input 태그의 id를 입력해준다.-->
+            <!--input의 value 속성에는 submit 했을 때 전송할 값을 입력한다.-->
+            <div class="contents"><label for="id-infp">INFP</label><input type="radio" name="mbti" id="id-infp" 
+                value="value-infp"></div>
+            <div class="contents"><label for="id-infj">INFJ</label><input type="radio" name="mbti" id="id-infj" 
+                value="value-infj"></div>
+            <div class="contents"><label for="id-istj">ISTJ</label><input type="radio" name="mbti" id="id-istj" 
+                value="value-istj"></div>
+            <div class="contents"><label for="id-entj">ENTJ</label><input type="radio" name="mbti" id="id-entj" 
+                value="value-entj"></div>
+            
+                <!--항목 선택후 보내기 버튼 눌렀을 때, 주소 표시줄에 value=? 표시됨-->
+        </div>
+
+        <select name="lang" id="lang-select-box">
+            <option value="">언어</option>
+            <option value="kor">한국어</option>
+            <option value="eng">eng</option>
+            <option value="chi">chi</option>
+            <option value="jp">jp</option>
+            <option value="hi">hi</option>
+        
+        </select>
+       <!--항목 선택후 보내기 버튼 눌렀을 때, 주소 표시줄에 lang=? 표시됨-->
+
+       <textarea name="장문" id="long text" cols="30" rows="10"></textarea>
+       <!--일반적으로 post 방식으로 사용함-->
+
+       
+        <input type="submit" value="보내기">
+        <!--value: 선택값-->
+        
+        <button type="button">그냥 버튼</button>
+        
+        <button type="submit">
+            <div class="button inner" style="display: flex; flex-direction: column;">
+                <p style="font-size: 24px; font-weignt: bold; background-color: red;">윗글씨</p>
+                <p>아랫글씨</p>
+            </div>
+        </button>
+        <!--input type=submit , button type=submit 차이점-->
+        <!--input submit 기능은 똑같으나 열고 닫는 태그x  value에 입력값 작성-->
+        <!--button 열고 닫는 태그가 있기 때문에 원하는대로 마크업 가능 ex. 글씨 크기, 색깔 등 조정 가능-->
+
+
+    </form>
+</body>
+</html>
