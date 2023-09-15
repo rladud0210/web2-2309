@@ -1,0 +1,49 @@
+<!--transition-특정 상황에 변하게 하는 것(ex. 마우스를 올렸을 때)  
+    animation-자동으로 애니메이션이 흘러가게-->
+<!--애니메이션 한 장씩 만드는 건 효율도가 떨어짐 
+    그래서 개체가 분리되어 있는 경우에는 '키프레임 애니메이션(웹에서 애니메이션을 만드는 방식)'-->
+<!--transition 과장된 표현은 어려움-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #222;
+            /*transition: 1s;*/
+            /*__초에 걸쳐서 재생*/
+            background-color: pink;
+
+            transition-property: background-color, width, height;
+            /*transiton을 __에만 주겠다*/
+            transition-duration: 1s, 1s, 1s; /*일반적으로 0.5초 아래로 많이 사용*/
+            transition-timing-function: ease;
+            /*ease가 일반적인 그래프. 똑같이 속도가 늘어났다가, 똑같이 속도가 줄어드는*/
+            transition-delay: 0s, 1s, 2s;
+            
+            
+            
+            /*transition-property: ; 게임 캐릭터를 만든다고 가정했을 때 공격력, 방어력이 property. 캐릭터가 가진 속성. 
+            특정 속성에 애니메이션 부여할 때 이용, 복수설정 가능
+            transition-duration: ;애니메이션에 지속시간. 길 수록 느리고 짧을 수록 빠르다
+            transition-timing-function:  ; 속도의 그래프. 특별한 가속도를 사용할 때-https://easings.net 등의 사이트에서 함수 참고 가능
+            -o-transition-delay: ; 애니메이션이 시작되기 전에 지연시간*/
+        }
+       
+        /*hover- 마우스가 화면 위에 있을 때 (클릭하지 않은) 
+        boxhover- 박스 위에 마우스를 올렸을 때*/
+       .box:hover{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
