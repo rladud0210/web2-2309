@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        a{
+            color: #222;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .outter-list-container{
+            display: flex;
+        }
+
+        .outter-list {
+            width: 240px;
+            line-height: 50px;
+            background-color: #222;
+            font-weight: bold;
+        }
+
+        .outter-list>a{
+            color: white;
+        }
+
+        .inner-list-container{
+            height: 0px;
+            overflow: hidden;
+            transition: 1s;
+            position: absolute
+        }
+
+        .outter-list:hover>.inner-list-container{
+            height: 200px;
+        }
+
+        .inner-list{
+            width: 240px;
+            height: 50px;
+            border: 1px solid #222;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <!--header>nav>ul>li{MENU$}*5-->
+   <!-- ctrl alt 방향키 한 번에 여러 줄 선택-->
+    <header>
+        <nav>
+            <ul class="outter-list-container">
+                <li class="outter-list">
+                    <a href="#">MENU1</a>
+                    <ul class="inner-list-container">
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a href="#">MENU2</a>
+                    <ul class="inner-list-container">
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a href="#">MENU3</a>
+                    <ul class="inner-list-container">
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a href="#">MENU4</a>
+                    <ul class="inner-list-container">
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a href="#">MENU5</a>
+                    <ul class="inner-list-container">
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                        <li class="inner-list"><a href="#">inner-menu</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<!--순서가 있는 태그
+1.
+2.
+3.
+<ol>
+    <li></li>
+</ol>
+-->
+<!--순서가 없는 태그
+*
+*
+*
+<ul>
+    <li></li>
+</ul>
+-->
+</body>
+</html>
