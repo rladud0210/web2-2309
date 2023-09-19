@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ani-container{
+            width:150px;
+            height: 250px;
+            border: 1px solid black;
+        }
+
+        .stroke1{
+            width: 50px;
+            height: 250px;
+            background-color: pink;
+           
+        }
+       
+        .stroke2{
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+        
+        .stroke3{
+            width: 50px;
+            height: 250px;
+            background-color: coral;
+        }
+
+      
+        /* flex로 정렬
+         .ani-container{
+            display: flex;
+            align-items: center;
+        }*/
+
+        .ani-container{
+            position: relative;
+        }
+        
+        .ani-container > div{
+            position: absolute;
+        }
+
+        .stroke1{
+            top: 0;
+            left: 0;
+            animation: stroke1 5s infinite alternate;
+        }
+
+        .stroke2{
+            top: 100px;
+            left: 50px;
+            animation: stroke2 5s infinite alternate;
+        }
+
+        .stroke3{
+            top: 0;
+            left: 100px;
+            animation: stroke3 5s infinite alternate;
+        }
+
+        /*alternate 왔다갔다*/
+
+        @keyframes stroke1 {
+            0%{
+                height: 0;
+            }
+
+            20%{
+                height: 250px;
+            }
+
+            100%{
+                height: 250px;
+            }
+        }
+
+        @keyframes stroke2 {
+            0%{
+                width: 0;
+            }
+
+            20%{
+                width: 0px;
+            }
+
+            40%{
+                width: 50px;
+            }
+
+            100%{
+                width: 50px;
+            }
+        }
+
+        @keyframes stroke3 {
+            0%{
+                height: 0;
+            }
+
+           40%{
+                height: 0px;
+           }
+            
+            60%{
+                height: 250px;
+            }
+
+            100%{
+                height: 250px;
+            }
+        }
+
+/*애니메이션은 따로 만들더라도 전체 지속시간은 통일*/
+/*애니메이션 만들 때는 flex로 정렬이 안 되는 경우가 있음. absolute 사용*/
+/*웹 사이트의 구조를 만들 때는 absolute 사용x container 안에서 배치할 때는 사용ㅇ*/
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="ani-container">
+            <div class="stroke1"></div>
+            <div class="stroke2"></div>
+            <div class="stroke3"></div>
+        </div>
+    </section>
+
+</body>
+</html>
