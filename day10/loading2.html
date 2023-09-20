@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section {
+        width: 500px;
+        height: 500px;
+        background-color: gray;
+       
+        position: relative
+    }
+
+    
+    .container {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        
+        transform: translate(-20px,-20px); 
+    }
+
+
+    .loading {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 5px solid white;
+        
+        border-top-color: red;
+        animation: loading 1s infinite;
+        
+        
+    }
+
+    @keyframes loading{
+        from {
+            transform: rotate(0deg);
+
+        }
+        to{
+          transform: rotate(360deg);
+        }
+            
+    }
+     
+    
+</style>
+<body>
+    <section>
+        <div class="container">
+            <div class="loading"></div>
+        </div>
+    </section>
+</body>
+
+
+</html>

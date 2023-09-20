@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   /*웹에서 사용하는 콘텐츠는 사각형으로 시작 ex.원은 사각형의 모서리를 최대하 둥글게*/
+   {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .container {
+        width: 500px;
+        height: 300px;
+        background-color: #cfcfcf;
+        position: relative;
+    }
+
+    .wrap {
+        position: absolute;
+         top: 50%;
+        left: 50%;
+        /*항상 기준은 꼭지점 (top, left 100일 때 빨간 네모박스는 컨테이너 꼭지점 밖
+        l, t는 position이 기준,transform은 x*/
+        transform: translate(-50%, -50%);
+    }
+
+    .roading {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        /*모서리 각 조절. 가로 세로 비율이 같기 때문에 50%*/
+        border: white 5px solid;
+        /*border로 가운데가 비어있는 원 만들 수ㅇ*/
+        border-top: red 5px solid;
+        animation: roading1 1s infinite;
+
+    }
+
+    @keyframes roading1 {
+       /*0%*/
+        from {
+            transform: rotate(0);
+
+        }
+        /*100%*/
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+   <section></section>
+   
+    <div class="container">
+        <div class="wrap">
+            <div class="roading"></div>
+        </div>
+    </div>
+</body>
+</html>
