@@ -28,6 +28,7 @@
         border-radius: 16px;
         /*짧은 면의 절반*/
         position: relative;
+        animation: mouse 2s infinite;
     }
 
     .wheel{
@@ -39,20 +40,51 @@
         left: 50%;
         top: 30%;
         transform: translate(-50%,-50%);
-        animation: wheel 1s infinite;
+        animation: wheel 2s infinite;
     }
 
     @keyframes wheel {
         from{
-            transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%)
         }
+        
+        33%{
+            transform: translateX(-50%) translateY(-50%)
+        }
+
+       66%{
+            transform: translateX(-50%) translateY(12px);
+        }
+
         to{
             transform: translateX(-50%) translateY(12px);
         }
     }
 
+    @keyframes mouse {
+        from{
+            opacity: 0;
+            transform: translateY(0) scale(0);
+        }
+        
+        33%{
+            opacity: 1;
+            transform: translateY(0); 
+        }
 
+        66%{
+            opacity: 1;
+            transform: translateY(20px);
+        }
 
+        to{
+            opacity: 0;
+            transform: translateY(20px) scale(0);
+        }
+        
+    }
+ 
+  
 
 </style>
 
