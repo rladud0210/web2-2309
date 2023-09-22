@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        section{
+            width: 100%;
+            padding: 0 32px;
+            box-sizing: border-box;
+        }
+
+        .section-container {
+            max-width: 1216px;
+            margin: 0 auto;
+        }
+/*max-width: width가 최대 설정한 값까지만 커지게 함*/
+        @media screen and (max-width: 800px){
+            section {
+                padding: 0 16px;
+            }
+        }
+/*margin 0 auto  상하 여백 0 좌우 여백 auto, margin 1234 상 하 좌 우 & padding*/
+/*높이를 줄 땐 주의.*/
+    </style>
+</head>
+<body>
+    <!--웹에 빈 공간이 없게 채우는 section &  div-->
+    <section class="main">
+        <div class="section-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem delectus possimus saepe? Non repudiandae cumque hic nesciunt dignissimos voluptas nam, provident tempore nihil quod, accusamus eos? Voluptatem optio dolor saepe.
+        </div>
+    </section>
+</body>
+
+</html>
